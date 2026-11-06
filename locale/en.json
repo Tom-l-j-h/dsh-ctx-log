@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Context Trail Logger",
+    "description": "Records every session event (user/assistant messages, tool calls and results, turn ends) to a daily JSONL file and injects the log path plus a recent-message summary into the system prompt, so details survive context compaction."
+  }
+}

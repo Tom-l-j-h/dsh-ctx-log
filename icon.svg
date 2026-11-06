@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Context Trail Logger">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f7cff"/>
+      <stop offset="1" stop-color="#2f4fd0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="6" width="56" height="52" rx="10" fill="url(#g)"/>
+  <rect x="12" y="16" width="40" height="4" rx="2" fill="#ffffff" opacity="0.95"/>
+  <rect x="12" y="26" width="30" height="4" rx="2" fill="#ffffff" opacity="0.8"/>
+  <rect x="12" y="36" width="36" height="4" rx="2" fill="#ffffff" opacity="0.65"/>
+  <rect x="12" y="46" width="20" height="4" rx="2" fill="#ffffff" opacity="0.5"/>
+  <circle cx="46" cy="46" r="7" fill="#ffd166"/>
+  <path d="M46 42.5v7M42.5 46h7" stroke="#2f4fd0" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,13 @@
+# dsh-ctx-log 的 Cordis 补丁：把插件挂进 profile。
+# logDir 留空 = 默认 ~/.dsh/ctx-log；按需改本文件后 disable→enable 或重启应用生效。
+- insert:
+    - id: dsh-ctx-log
+      name: 'dsh-ctx-log'
+      config:
+        logDir: ''
+        maxTextChars: 4000
+        maxToolChars: 1500
+        injectTrail: true
+        trailRecentLines: 6
+        skipTypes: []
+        watchFiles: []

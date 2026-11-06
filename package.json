@@ -1,0 +1,44 @@
+{
+  "name": "dsh-ctx-log",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: session context trail logger — daily JSONL of session events plus prompt injection, so details survive context compaction.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Tom-l-j-h",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tom-l-j-h/dsh-ctx-log.git"
+  },
+  "homepage": "https://github.com/Tom-l-j-h/dsh-ctx-log#readme",
+  "bugs": {
+    "url": "https://github.com/Tom-l-j-h/dsh-ctx-log/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "context",
+    "compaction",
+    "jsonl"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

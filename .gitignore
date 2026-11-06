@@ -1,0 +1,8 @@
+node_modules/
+*.log
+ctx_*.jsonl
+.DS_Store
+Thumbs.db
+dist/
+.idea/
+.vscode/
