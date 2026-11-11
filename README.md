@@ -74,6 +74,14 @@ Claude Code / Codex 有会话钩子可以把原始轨迹落盘；**DSH 没有内
 | `skipTypes` | `[]` | 跳过的 session 事件类型（如只记对话不记工具） |
 | `watchFiles` | `[]` | 信息新鲜度监控：`[{ path, label }]`，按 mtime 提示多久没更新 |
 
+## Cost / 成本
+
+每轮系统提示固定注入两段上下文：轨迹路径（+已记条数）与当前时间（+可选文件新鲜度），以及 `trailRecentLines` 条摘要。
+按 `evals/RESULTS.md` 的实测（chars÷1.6 代理估算）：常规规模每轮约 400 token；100 轮会话约 40,000 token。
+不需要注入时设 `injectTrail: false`，只落盘不占上下文。
+
+> 实测口径：`trailRecentLines` 默认 6、`watchFiles` 为空。0 行日志（无摘要）约 186 token/轮，即固定开销；摘要固定取尾部 6 条，所以成本随 `trailRecentLines` 变化，不随日志体积线性增长。
+
 ## ⚠️ 隐私与安全（必读）
 
 - 本插件**默认记录对话全文 + 工具参数/结果**，这些内容里可能有密钥、个人信息、业务数据。
